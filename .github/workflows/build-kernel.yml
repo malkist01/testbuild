@@ -1,4 +1,4 @@
-name: Build MikaKernel
+name: Build TeletubiesKernel
 
 
 on:
@@ -31,6 +31,7 @@ jobs:
 
       - name: Build kernel
         run: |
+          export TZ=Asia/Jakarta
           export KBUILD_BUILD_USER="malkist"
           export KBUILD_BUILD_HOST="workspace"
           export PATH=$GITHUB_WORKSPACE/clang/bin:${PATH}
